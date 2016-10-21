@@ -2,10 +2,20 @@ Prism.languages.css.selector = {
 	pattern: /[^\{\}\s][^\{\}]*(?=\s*\{)/,
 	inside: {
 		'pseudo-element': /:(?:after|before|first-letter|first-line|selection)|::[-\w]+/,
-		'pseudo-class': /:[-\w]+(?:\(.*\))?/,
+		'pseudo-class': /:[-\w]+/,
 		'class': /\.[-:\.\w]+/,
 		'id': /#[-:\.\w]+/,
-		'attribute': /\[[^\]]+\]/
+		'attribute': {
+            pattern:  /\[[^\]]+\]/,
+            inside: {
+                'string': {
+                    pattern: /("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,
+                    greedy: true
+                },
+                'punctuation': /[>()\[\]*=]/
+            },
+        },
+		'punctuation': /[>()\[\]*=]/,
 	}
 };
 

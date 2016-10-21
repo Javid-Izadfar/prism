@@ -20,6 +20,18 @@ Prism.languages.markup = {
 				}
 			},
 			'punctuation': /\/?>/,
+			'attr-name attr-name-id': {
+				pattern: /^\s*id/i,
+				inside: {
+					'namespace': /^[^\s>\/:]+:/
+			 	},
+			},
+			'attr-name attr-name-class': {
+				pattern: /^\s*class/i,
+				inside: {
+					'namespace': /^[^\s>\/:]+:/
+				},
+			},
 			'attr-name': {
 				pattern: /[^\s>\/]+/,
 				inside: {

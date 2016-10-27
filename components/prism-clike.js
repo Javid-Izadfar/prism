@@ -20,7 +20,10 @@ Prism.languages.clike = {
 			punctuation: /(\.|\\)/
 		}
 	},
-	'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+	'keyword control': /\b(if|else|while|do|for|return|try|throw|catch|finally|break|continue)\b/,
+	'keyword type': /\b(function|null)\b/,
+	'keyword operator': /\b(in|instanceof)\b/,
+	'keyword new': /\b(new)\b/,
 	'boolean': /\b(true|false)\b/,
 	'function': /[a-z0-9_]+(?=\()/i,
 	'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,

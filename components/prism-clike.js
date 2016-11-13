@@ -13,6 +13,7 @@ Prism.languages.clike = {
 		pattern: /(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
 		greedy: true
 	},
+	'function': /[a-z0-9_]+(?=\()/i,
 	'class-name': {
 		pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
 		lookbehind: true,
@@ -25,7 +26,6 @@ Prism.languages.clike = {
 	'keyword operator': /\b(in|instanceof)\b/,
 	'keyword new': /\b(new)\b/,
 	'boolean': /\b(true|false)\b/,
-	'function': /[a-z0-9_]+(?=\()/i,
 	'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
 	'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
 	'punctuation': /[{}[\];(),.:]/

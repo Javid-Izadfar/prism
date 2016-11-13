@@ -36,6 +36,21 @@ Prism.languages.insertBefore('javascript', 'operator', {
 	}
 });
 
+Prism.languages.insertBefore('javascript', 'function', {
+	'keyword function-ref': {
+		pattern: /\_.[a-zA-Z_$]+[\w$]+\./,
+		inside: {
+			'punctuation': /[.]/,
+			'keyword identifier': /[_]/
+		}
+	},
+	'keyword object': {
+		pattern: /[a-zA-Z_$]+[\w$]+\./,
+		inside: {
+			'punctuation': /[.]/
+		}
+	}
+});
 
 Prism.languages.insertBefore('javascript', 'string', {
 	'template-string': {

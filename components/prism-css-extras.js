@@ -22,7 +22,7 @@ Prism.languages.css.selector = {
 Prism.languages.insertBefore('css', 'function', {
 	'hexcode': /#[\da-f]{3,6}/i,
 	'entity': /\\[\da-f]{1,8}/i,
-	'number': /[\d%\.]+/,
+	'number': /(\-*?)+[\d%\.]+/,
 	'unit': /(%|cm|em|ex|in|mm|ex|pc|pt|px|vh|vw|vmin)/,
     'string': {
 		pattern: /("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,

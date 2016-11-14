@@ -34,6 +34,8 @@ Prism.languages.scss = Prism.languages.extend('css', {
 });
 
 Prism.languages.insertBefore('scss', 'atrule', {
+	'keyword if': /@(?:if|else(?: if)?)/i,
+	'keyword atrule': /@[\w-]+(?:\([^()]+\)|[^(])*?/,
 	'keyword': [
 		/@(?:if|else(?: if)?|for|each|while|import|extend|debug|warn|mixin|include|function|return|content)/i,
 		{

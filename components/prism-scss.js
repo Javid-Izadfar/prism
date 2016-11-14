@@ -27,6 +27,7 @@ Prism.languages.scss = Prism.languages.extend('css', {
 				pattern: /&/,
 				alias: 'important'
 			},
+			'comparison': /!=?=?|<=?|>=?|===?/,
 			'placeholder': /%[-_\w]+/,
 			'variable': /\$[-_\w]+|#\{\$[-_\w]+\}/
 		}
